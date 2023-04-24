@@ -1,0 +1,133 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+.container-fluid {
+    padding: 3% 2% 5%;
+    margin: 0;
+}
+
+h1,
+h4,
+h5,
+h2 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.7rem;
+}
+
+.INFO {
+    padding: 2% 2% 0;
+}
+
+.SUGG {
+    padding: 2% 1% 0;
+}
+
+.info {
+    margin: 10% 0;
+}
+
+.icon {
+    margin-right: 5%;
+}
+
+.icon:hover {
+    color: #ff4c68;
+}
+
+#footer {
+    text-align: center;
+    padding: 3% 20% 1%;
+    background-color: #ff4c68;
+}
+
+.icon2 {
+    margin: 0.6%;
+}
+
+.icon2:hover {
+    color: #fff;
+}
+
+.pf {
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+#down {
+    background-color: #FDF5E9;
+    padding: 3% 15%;
+}
+
+#Down-Text {
+    font-family: 'Delicious Handrawn', cursive;
+    font-size: 3.5rem;
+}
+
+.down-btn {
+    margin: 5% 3% 10% 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.down-info {
+    padding-top: 10%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.phone {
+    position: relative;
+    filter: brightness(120%);
+    filter: contrast(120%);
+    filter: drop-shadow(10px 10px 10px black);
+}
+
+.testimonial {
+    background-color: #FFC853;
+    text-align: center;
+    color: purple;
+}
+
+.test-img {
+    margin: 3% auto;
+    width: 25%;
+    border-radius: 100%;
+}
+
+.carousel-item {
+    padding: 4% 20% 1.5%;
+}
+
+#carouselExampleCaptions {
+    padding-bottom: 3%;
+}
+
+.feature2 {
+    background-color: #FDF5E9;
+    margin: 12% 0;
+    text-align: center;
+    padding: 2% 5% 1%;
+}
+
+.f-img {
+    height: 200px;
+    /* width: 100%; */
+}
+
+.f2 {
+    padding: 3%;
+}
+
+#f-img1 {
+    width: 100%;
+}

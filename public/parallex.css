@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+}
+.container{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+    margin: 0;
+}
+#mount{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-40px) scale(5);
+}
+#man{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-20px) scale(4);
+}
+h1{
+    position: absolute;
+    font-size: 5rem;
+    letter-spacing: 4px;
+    top: 5rem;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    color: white;
+}
+section{
+    padding: 5rem 0;
+    color: white;
+    background-color: rgb(45,45,45);
+}
+.secheading{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+.desc{
+    background-color: white;
+    display: inline;
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+    position: absolute;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+.bg1{
+    background-image: url(sikkkim.jfif);
+}
+.bg2{
+    background-image: url(jaipur.jfif);
+}
+.bg3{
+    background-image: url(konark.jpg);
+}
+
+

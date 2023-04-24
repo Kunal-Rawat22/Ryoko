@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #9e6161;
+  position: relative;
+}
+#navi{
+  color: rgb(255, 238, 0);
+
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header {
+  display: inline-block;
+  font-size: 22px;
+  color: #000000;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(24, 244, 189, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+.home{
+
+border-radius: 12px;
+width: fit-content;
+color: coral;
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+
+}
+#ryoko-home{
+padding-left: 50px;
+}
+#ryoko-home:hover{
+  transform: scale(1.2);
+  transition: all ease-in-out 0.4s;
+  color: aqua;
+ 
+  background-color: rgb(4, 149, 149);
+  border-radius: 8px;
+}
+#h1 {
+
+  font-size: 36px;
+  line-height: 40px;
+
+}
+p{
+  background-color: aquamarine;
+  font-weight: 200;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 3px;
+}
+body {
+  background: linear-gradient(black, rgb(217, 85, 85));
+  background-repeat: no-repeat;
+  background-blend-mode: hard-light;
+}
+img{
+  border-radius: 5px;
+}

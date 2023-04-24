@@ -1,0 +1,18 @@
+<%-include('partials/header.ejs')%>
+       <h3><%=Title%>Here</h3>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Email or Phone" id="username" name="username">
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" name="password">
+
+        <button><%=Body%></button>
+        <% if(flag===1){%>
+        <div><small id="titleHelp" class="form-text text-muted">Don't have an Account ? <a href="/register">Click Here</a></small></div>
+        <%}%>
+        <div class="social">
+          <div class="go"><i class="fab fa-google"></i>  Google</div>
+          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+        </div>
+<%-include('partials/footer.ejs')%>
