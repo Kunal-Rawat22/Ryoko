@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Ryokko</title>
+
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+
+        <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="home.css" rel="stylesheet">
+      <style>
+        @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+        
+
+*{
+  margin:0;
+  padding:0;
+  /* box-sizing:border-box; */
+  font-family: "Be Vietnam Pro", sans-serif;
+  scroll-behavior: smooth;
+}
+:root {
+  --bgOrange: #e84949;
+}
+
+.euro-section{
+    background-color: rgb(231,231,231);
+    margin-top:4rem;
+  }
+
+  .page-header{
+    color:var(--bgOrange);
+    font-size:90px;
+    text-align:center;
+    padding-top:30px;
+  }
+  .euro-container{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:3rem 0;
+
+    display:flex;
+    flex-direction:column;
+    gap:120px;
+  }
+
+  .euro-card{
+    width:90%;
+    height:550px;
+    background-image: url(./images/paris.jpg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    position:relative;
+    box-shadow:0px 0px 40px #1f1f1f;
+  }
+
+  .euro-card::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #1f1f1f9a;
+    z-index:0;
+    /* transform: scaleX(1); */
+  }
+
+  .euro-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+    transform:scaleX(0);
+    transform-origin: left;
+    transition: all 0.4s;
+    z-index:1;
+  }
+
+  .euro-card:hover::before{
+    transform:scaleX(1);
+  }
+
+  .euro-number{
+    position:absolute;
+    font-size:200px;
+    font-weight:600;
+    color:white;
+    z-index:10;
+    /* display:none; */
+    opacity: 0;
+  }
+
+  .euro-card:hover .euro-number{
+    /* display:block; */
+    opacity: 1;
+  }
+
+  .euro-number-right{
+    right:-40px;
+    top:-45px;
+  }
+
+  .euro-number-left{
+    left:-40px;
+    top:-45px;
+  }
+
+  .euro-content{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    color:white;
+    padding:2em;
+    bottom:20%;
+    z-index:5;
+    gap:1em;
+    transition:all 0.4s;
+  }
+
+  .btn-pink {
+    background-color: var(--bgOrange);
+    width: fit-content;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1;
+  }
+  .btn-pink::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+  }
+  .btn-pink:hover::before {
+    transform: scaleX(1);
+  }
+  .btn-pink:hover {
+    border: solid 3px var(--bgOrange);
+    color: black;
+  }
+
+  .euro-content-left{ 
+    left:10%;
+  }
+
+  .euro-content-right{ 
+    right:10%;
+  }
+
+  .euro-skills-container{
+    width:60%;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+  
+  }
+
+  .euro-skill{
+    width:40px;
+  }
+
+  .euro-heading{
+    font-size:50px;
+    font-weight: bold;
+    line-height:3rem;
+  }
+  
+  .euro-subHeading{
+    width:70%;
+    font-size:16px;
+    font-style: italic;
+  }
+
+
+  .btn-grp{
+    display:flex;
+    gap:0.9rem;
+    align-items:center;
+  }
+
+  .btn-euro:hover{
+    border:none;
+  }
+
+
+
+  .euro-card:hover .euro-content{
+    transform:scale(1.1);
+  }
+
+  #euro1{
+    background-image: url(paris.jpg);
+  }
+
+  #euro2{
+    margin-left:120px;
+    background-image: url(london.jpg);
+  }
+  #euro3{
+    background-image: url(amsterdam.jpg);
+  }
+  #euro4{
+    margin-left:120px;
+    background-image: url(berlin.jpg);
+  }
+
+  #euro5{
+    background-image: url(mum.jfif);
+  }
+      </style>
+</head>
+<body>
+    
+ <!-- Topbar Start -->
+ <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+  <div class="row gx-0">
+      <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+          <div class="d-inline-flex align-items-center" style="height: 45px;">
+              
+              <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>9911136266</small>
+              <small class="text-light"><i class="fa fa-envelope-open me-2"></i>kunalrawat399@gmail.com</small>
+          </div>
+      </div>
+      <div class="col-lg-4 text-center text-lg-end">
+          <div class="d-inline-flex align-items-center" style="height: 45px;">
+              <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+              <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+              <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+              <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+              <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Topbar End -->
+
+
+<!-- Navbar & Hero Start -->
+<div class="container-fluid position-relative p-0">
+  <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+      <a href="" class="navbar-brand p-0">
+          <h1 class="text-primary m-0">RYOKO
+          <img src="logo.jpg" alt="Logo"></h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="fa fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto py-0">
+              <a href="/" class="nav-item nav-link active">Home</a>
+              <a href="/about" class="nav-item nav-link">About</a>
+              <a href="/service" class="nav-item nav-link">Services</a>
+              
+              <div class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                  <div class="dropdown-menu m-0">
+                      <a href="/destination" class="dropdown-item">Destination</a>
+                      <a href="/booking" class="dropdown-item">Booking</a>
+                      <a href="/team" class="dropdown-item">Travel Guides</a>
+                      
+                      <a href="/404" class="dropdown-item">404 Page</a>
+                  </div>
+              </div>
+              <a href="/contact" class="nav-item nav-link">Contact</a>
+          </div>
+          <a href="/login" class="btn btn-primary rounded-pill py-2 px-4">Log In</a>
+      </div>
+  </nav>
+</div>
+
+  <div id="wrapper">
+    <div class="euro-section" id="euros">
+        <h2 class="page-header">Explore Europe</h2>
+
+        <div class="euro-container">
+            <div class="euro-card" id="euro1">
+                <div class="euro-number euro-number-right">01</div>
+                <div class="euro-content euro-content-left">
+
+
+
+                    <h2 class="euro-heading">Paris</h2>
+
+                    <p class="euro-subHeading">“ There are only two places in the world where we can live happy: at home and in Paris.”
+                    </p>
+                    <div class="btn-grp">
+                        <button class="btn-pink btn-euro">Explore</button>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="euro-card" id="euro2">
+              <div class="euro-number euro-number-left">02</div>
+              <div class="euro-content euro-content-right">
+                
+                <h2 class="euro-heading">London</h2>
+                <p class="euro-sub-heading"  >
+                   <q> In London, everyone is different, and that means anyone can fit in.</q>
+                </p>
+                <div class="btn-group">
+                  <button class="btn-pink btn-euro">Explore</button>
+                  
+                </div>
+              </div>
+            </div>
+      
+            <div class="euro-card" id="euro3">
+              <div class="euro-number euro-number-right">03</div>
+              <div class="euro-content euro-content-left">
+                
+      
+                <h2 class="euro-heading">Amsterdam</h2>
+                <p class="euro-sub-heading">
+                    <q>I am a village boy, and Amsterdam for me was always the big town.</q>
+                </p>
+                <div class="btn-group">
+                  <button class="btn-pink btn-euro">Explore</button>
+                  
+                </div>
+              </div>
+            </div>
+      
+            <div class="euro-card" id="euro4">
+              <div class="euro-number euro-number-left">04</div>
+              <div class="euro-content euro-content-right">
+                
+                <h2 class="euro-heading">Berlin</h2>
+                <p class="euro-sub-heading">
+                    <q>Berlin, the greatest cultural extravaganza that one could imagine.</q>
+                </p>
+                <div class="btn-group">
+                  <button class="btn-pink btn-euro">Explore</button>
+                  
+                </div>
+              </div>
+            </div>
+
+
+            <a href="/india"><div class="euro-card" id="euro5">
+              <div class="euro-number euro-number-right">05</div>
+              <div class="euro-content euro-content-left">
+                
+      
+                <h2 class="euro-heading">Mumbai</h2>
+                <p class="euro-sub-heading">
+                    <q>Yeh Bambai hai ... aur yahan sapne us hi ke poore hote hai ... jinki aankhen khuli rehti hai.</q>
+                </p>
+                <div class="btn-group">
+                  <button class="btn-pink btn-euro">Explore</button>
+                  
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

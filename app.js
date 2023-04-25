@@ -38,7 +38,7 @@ async function main () {
      }
      
      try {
-      await mongoose.connect("mongodb://127.0.0.1:27017/teamTrojanDB", connectionOptions);
+      await mongoose.connect("mongodb+srv://Kunal_Rawat:tBDn1NKR@cluster0.ocgxfgn.mongodb.net/teamTrojanDB", connectionOptions);
       console.log(`Connected to MongoDB`)
      } catch (err) {
       console.log(`Couldn't connect: ${err}`)
@@ -77,7 +77,7 @@ const userSchema = new mongoose.Schema({
 //Express Js
 app.route('/')
     .get(function (req, res) {
-        res.sendFile(__dirname + '/home.html');
+        res.render('home');
     });
 
 app.route('/login')
@@ -92,8 +92,10 @@ app.route('/login')
         }
         findO(RequestedObj).then((result) => {
             // console.log(result);
-            if (result !== null && result.password==md5(RequestedObj.password))
-                res.render();
+            if (result !== null && result.password == md5(RequestedObj.password))
+            {
+                res.sendFile(__dirname+'/vr.html');
+                }
             else
                 res.sendFile(__dirname+'/404page.html');
         }).catch((err)=>{
@@ -121,12 +123,47 @@ app.route('/register')
 app.get('/india', function (req, res) {
     res.sendFile(__dirname+ '/parallex.html');
   })
-app.get('/places', function (req, res)
+app.get('/destination', function (req, res)
 {
-    res.sendFile(__dirname + '/Places.html');
+    res.sendFile(__dirname + '/destination.html');
 })
 app.get('/404', function (req, res) {
     res.sendFile(__dirname + '/404page.html');
 })
+app.route('/service')
+    .get(function (req, res)
+    {
+        res.render('service');
+})
+app.route('/contact')
+.get(function (req, res)
+{
+    res.render('contact')
+})
+app.route('/team')
+.get(function (req, res)
+{
+    res.render('team');
+})
+app.route('/booking')
+.get(function (req, res)
+{
+    res.render('booking')
+})
+app.route('/about')
+.get(function (req, res)
+{
+    res.render('about')
+})
+app.post('/Response1', function (req, res) {
+    const BtnMsg = req.body.BtnMsg;
+    if (BtnMsg == RegRsponse[0].BtnMsg)
+        res.redirect('/register');
+    else
+        res.redirect('/login');
+});
+
+
+
 
 app.listen(3000, function () { console.log("Server started on 3000") });
